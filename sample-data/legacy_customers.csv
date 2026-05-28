@@ -1,0 +1,7 @@
+old_email,old_phone,old_first_name,old_last_name,old_dob,old_account
+john.doe@email.com,+1 555-0101,John,Doe,1985-03-15,ACC10001
+jane.smith@email.com,+1 555-0102,Jane,Smith,1990-07-22,ACC10002
+invalid-email,Jane,Doe,1992-01-01,ACC10003
+bob.wilson@email.com,123,Bob,Wilson,not-a-date,ACC10004
+alice.brown@email.com,+1 555-0105,Alice,Brown,1988-11-30,ACC10005
+john.doe@email.com,+1 555-0106,John,Doe,1985-03-15,ACC10006

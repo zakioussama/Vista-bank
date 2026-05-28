@@ -1,0 +1,6 @@
+id,migration_id,customer_id,first_name,last_name,email,phone_number,account_number,account_type,balance,currency,branch_code,account_status,created_at
+1,MIG-2024-001,CUST10001,Ahmed,Benali,ahmed.benali@email.com,0612345678,123456789012,SVG,15000.50,MAD,BR001,ACT,2020-03-15
+2,MIG-2024-001,CUST10002,Fatima,Alaoui,fatima.alaoui@email.com,0623456789,123456789013,CHK,8500.00,USD,BR002,ACT,2021-07-22
+3,MIG-2024-001,CUST10003,Youssef,Idrissi,invalid-email,0634567890,123456789014,BUS,22000.75,EUR,BR001,ACT,2019-11-30
+4,MIG-2024-001,CUST10004,Sara,Amrani,sara.amrani@email.com,064567890,123456789015,CUR,-500,MAD,BR003,FRZ,2022-01-10
+5,MIG-2024-001,CUST10005,Karim,Tazi,karim.tazi@email.com,0656789012,123456789012,SVG,5000.00,MAD,BR001,ACT,2023-05-18

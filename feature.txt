@@ -1,0 +1,131 @@
+New CSV Structure
+
+Replace the old CSV schema with this improved banking-oriented structure:
+
+id,migration_id,customer_id,first_name,last_name,email,phone_number,account_number,account_type,balance,currency,branch_code,account_status,created_at
+
+Field Descriptions
+id → old system row id
+migration_id → migration batch identifier
+customer_id → bank customer identifier
+first_name → customer first name
+last_name → customer last name
+email → customer email
+phone_number → customer phone number
+account_number → bank account number
+account_type → savings/current/business/checking
+balance → account balance
+currency → MAD/USD/EUR
+branch_code → branch identifier
+account_status → active/frozen/closed
+created_at → account creation date
+Required Updates
+1. Frontend
+
+Update:
+
+upload preview table
+validation table
+field mapping page
+migration preview
+dashboard statistics
+logs table
+
+Ensure all new fields appear correctly in:
+
+tables
+filters
+dropdown mappings
+migration reports
+2. Backend
+
+Update:
+
+CSV parser
+validation logic
+migration service
+database insertion logic
+mapping service
+
+Ensure migration supports all new banking fields.
+
+Validation Rules
+
+Implement validation for:
+
+Email
+must be valid email format
+Phone Number
+must contain only digits
+minimum length validation
+Account Number
+required
+unique
+fixed length validation
+Balance
+must be numeric
+cannot be negative
+Currency
+
+Allowed values:
+
+MAD
+USD
+EUR
+Account Status
+
+Allowed values:
+
+active
+frozen
+closed
+Account Type
+
+Allowed values:
+
+savings
+current
+business
+checking
+Mapping Logic
+
+The field mapping system must support mapping old system values to new system values.
+
+Example:
+
+Old Value → New Value
+
+CHK → checking
+SVG → savings
+BUS → business
+
+The migration engine should automatically transform these values before inserting into MySQL.
+
+Database Updates
+
+Update MySQL schema and models to include all new fields.
+
+Ensure:
+
+proper column types
+constraints
+indexes where needed
+timestamps
+relationships
+Migration Preview
+
+Before migration:
+display a transformation preview table showing:
+
+original CSV values
+transformed values
+validation status
+Logs & Reports
+
+Update migration reports to include:
+
+successful rows
+failed rows
+failure reason
+migration duration
+account-related validation errors

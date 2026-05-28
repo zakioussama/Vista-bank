@@ -1,0 +1,249 @@
+Create a full-stack internal web application for Vista Bank called:
+
+“Vista Data Migration Tool”
+
+Purpose:
+Design and develop an internal enterprise tool that migrates user data from an old banking system to a new platform safely and efficiently.
+
+Tech Stack:
+
+Backend: Node.js + Express.js
+Frontend: React.js + Tailwind CSS
+Database: MySQL
+Authentication: JWT
+Architecture: REST API client/server architecture
+
+Project Requirements:
+
+Main Features
+Authentication & Roles
+
+Implement secure authentication using JWT.
+
+Roles:
+
+Admin
+Operator
+
+Admin permissions:
+
+manage users
+view logs
+monitor migrations
+manage mappings
+
+Operator permissions:
+
+upload files
+validate data
+launch migrations
+
+Features:
+
+login/logout
+protected routes
+role-based access control
+Dashboard
+
+Create a modern dashboard with:
+
+total migrations
+successful records
+failed records
+recent migration history
+statistics cards
+charts if possible
+
+UI should look professional and enterprise-level.
+
+File Import Module
+
+Allow importing:
+
+CSV files
+Excel files
+
+Features:
+
+drag-and-drop upload
+preview imported data
+file validation
+detect invalid formats
+
+Store uploaded file metadata in MySQL.
+
+Data Validation Module
+
+Validate imported data before migration.
+
+Checks:
+
+required fields
+duplicate emails
+invalid phone numbers
+invalid dates
+missing values
+
+Display validation errors in a clean table.
+
+Dynamic Field Mapping Module
+
+Create a mapping system where users can map old fields to new fields.
+
+Example:
+old_email → email
+old_phone → phone_number
+
+Requirements:
+
+interactive UI
+dropdown-based mapping
+save mappings
+reusable mappings
+Migration Engine
+
+Implement a migration service that:
+
+transforms data
+inserts valid records into MySQL
+skips invalid records
+tracks migration progress
+generates migration reports
+
+Features:
+
+start migration
+cancel migration
+rollback migration
+migration status tracking
+Logging System
+
+Create a logging module that stores:
+
+migration date
+user who launched migration
+errors
+successful operations
+failed operations
+
+Provide:
+
+searchable logs
+filtering
+pagination
+Backend Architecture
+
+Use a clean modular architecture.
+
+Backend structure:
+
+backend/
+│
+├── controllers/
+├── routes/
+├── services/
+├── middlewares/
+├── models/
+├── config/
+├── utils/
+├── validations/
+└── app.js
+
+Requirements:
+
+Express REST API
+Sequelize or Prisma ORM
+environment variables
+centralized error handling
+middleware architecture
+async/await
+scalable folder structure
+Frontend Architecture
+
+Frontend structure:
+
+frontend/
+│
+├── src/
+│ ├── pages/
+│ ├── components/
+│ ├── layouts/
+│ ├── services/
+│ ├── hooks/
+│ ├── context/
+│ ├── routes/
+│ └── App.jsx
+
+Requirements:
+
+React functional components
+React Router
+Axios API layer
+Tailwind CSS
+responsive UI
+reusable components
+loading states
+toast notifications
+protected routes
+Database Design
+
+Create MySQL tables for:
+
+users
+migrations
+uploaded_files
+mappings
+validation_errors
+logs
+
+Include:
+
+primary keys
+foreign keys
+timestamps
+proper relationships
+Non-Functional Requirements
+secure JWT authentication
+scalable architecture
+reusable code
+enterprise coding standards
+optimized database queries
+error handling
+maintainable structure
+UI/UX Requirements
+
+Design should look like a professional banking internal dashboard.
+
+Style:
+
+clean modern enterprise UI
+dark/light friendly
+responsive
+sidebar navigation
+top navbar
+cards
+tables
+charts
+modals
+
+Use Tailwind CSS with a modern design system.
+
+Additional Requirements
+
+Generate:
+
+complete backend API
+frontend pages
+database schema
+sample migration workflow
+reusable components
+API services
+middleware
+authentication flow
+
+Include:
+
+comments
+best practices
+scalable architecture
+production-ready structure

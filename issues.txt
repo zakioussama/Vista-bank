@@ -1,0 +1,96 @@
+Issue 1 — Field Mapping page crashes with white screen
+
+When I click “Field Mapping”, the React app crashes and shows a white screen.
+
+Console error:
+
+sourceColumns.map is not a function
+
+Error location:
+Mapping.jsx line 97
+
+The component tries to render:
+
+sourceColumns.map(...)
+
+Possible cause:
+
+sourceColumns is not an array
+backend API response shape may be incorrect
+frontend may be storing the whole response object instead of the array
+async data loading issue
+
+I need:
+
+debugging help
+proper defensive rendering
+correct API response handling
+fixes using Array.isArray()
+loading state handling
+best React practices to prevent crashes
+
+Also explain how the backend response should be structured.
+
+Example expected response:
+
+{
+"columns": ["email", "phone_number", "first_name"]
+}
+
+and how frontend should correctly consume it.
+
+Issue 2 — Invalid DOM nesting warning
+
+Console warning:
+
+validateDOMNesting(...):
+cannot appear as a child of
+
+The problem comes from:
+StatusBadge component being rendered inside an tag.
+
+I need:
+
+explanation of why this is invalid HTML
+proper React/Tailwind fix
+recommended alternative UI approach
+Issue 3 — Migration fails with “missing email”
+
+CSV structure:
+
+id
+migration_id
+email
+phone_number
+first_name
+last_name
+
+The CSV DOES contain the email column.
+
+However migration fails with:
+“migration missing email”
+
+Possible causes:
+
+migration expects mapped fields
+field mapping was skipped because mapping page crashes
+backend may be looking for row.mail instead of row.email
+mapping object may be undefined
+
+I need:
+
+explanation of why migration depends on field mapping
+correct ETL workflow
+robust migration architecture
+validation before migration
+backend transformation example
+
+Example mapping object:
+
+{
+"email": "email",
+"phone_number": "phone_number",
+"first_name": "first_name"
+}
+
+Then migration should transform rows correctly before inserting into MySQL.
